@@ -1,0 +1,7 @@
+spring:
+    cloud:
+        azure:
+            storage:
+                blob:
+                    account-name: wshistorageaccount
+                    endpoint: https://wshistorageaccount.blob.core.windows.net/wshi-container/wshi-test.txt
