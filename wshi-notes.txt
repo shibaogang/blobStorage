@@ -1,0 +1,19 @@
+-----------------------------------------------------------
+mvn clean package
+mvn spring-boot:run
+-----------------------------------------------------------
+spring.cloud.azure.storage.blob.account-name: [storage-account-name]
+spring.cloud.azure.storage.blob.endpoint: [storage-blob-service-endpoint]
+
+https://stackoverflow.com/questions/6985921/where-can-i-find-my-azure-account-name-and-account-key
+spring.cloud.azure.storage.blob.account-name: wshistorageaccount
+spring.cloud.azure.storage.blob.endpoint: https://wshistorageaccount.blob.core.windows.net/wshi-container/wshi-test.txt
+-----------------------------------------------------------
+curl http://localhost:8080/blob/writeBlobFile -d "new message" -H "Content-Type: text/plain"
+curl -X GET http://localhost:8080/blob/readBlobFile
+-----------------------------------------------------------
+GitHub Repo url:
+  https://github.com/shibaogang/blobStorage.git
+azure deployment URL under my personal subscription (Azure subscription 1)
+  https://wshi-readblobfile.azurewebsites.net
+-----------------------------------------------------------
